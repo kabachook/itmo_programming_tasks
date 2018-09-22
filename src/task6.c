@@ -1,9 +1,8 @@
 // MSVC
 #define _CRT_SECURE_NO_WARNINGS
 
-#include<stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
-
 
 int main(int argc, char **argv) {
     char *arr = malloc(sizeof(char) * 5);
@@ -18,6 +17,14 @@ int main(int argc, char **argv) {
     }
 
     free(arr);
+
+    char arr2[] = "Hello";
+
+    for (int i = 0; i < 5; i++) {
+        printf("arr2[%d] = %c\n", i, arr2[i]);
+    }
+
+    free(arr2);
 
     return 0;
 }
